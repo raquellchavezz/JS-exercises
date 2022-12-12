@@ -1,4 +1,4 @@
-# JS-exercises
+//# JS-exercises
 // Week 1 - Variables
 
 // In the following exercises, you will need to place your code or answer underneath each
@@ -47,9 +47,9 @@ var num2 = 10;
 // a. Assign the the values of 4 and 6 to num1 and num2, respectively.
 // b. Make a new variable called 'theSum', and use 'num1' and
 // 'num2' to assign its value using the "+" operator.
-a. num1 = 4; 
-   num2 = 6;
-b. var theSum = num1 + num2; 
+num1 = 4; 
+num2 = 6;
+var theSum = num1 + num2; 
 
 // Exercise 8. Now we will try some multiplication.
 // Make a new variable called 'theProduct', multiply num1 and num2 and assign
@@ -109,14 +109,14 @@ const myAnswerForExercise15 = "R2D2";
 // Exercise 16 What is the value of A * B
 const myAnswerForExercise16 = "NaN";
 
-// Exercise 17 What is the value of true || false *************************
+// Exercise 17 What is the value of true || false **
 const myAnswerForExercise17 = "true";
 
-// Exercise 18 What is the value of 1 === "1"
-const myAnswerForExercise18 = "true";
+// Exercise 18 What is the value of 1 === "1" //checking data type
+const myAnswerForExercise18 = "false";
 
-// Exercise 19 What is the value of 1 == "1"
-const myAnswerForExercise19 = true";
+// Exercise 19 What is the value of 1 == "1" // converts num to string
+const myAnswerForExercise19 = "true";
 
 // Exercise 20 What is the value of 1 < 1
 const myAnswerForExercise20 = "false";
@@ -124,7 +124,7 @@ const myAnswerForExercise20 = "false";
 // Exercise 21 What is the value of 1 < 2 < 3
 const myAnswerForExercise21 = "true";
 
-// Exercise 22 What is the value of 2 < 1 < 3 *******************************
+// Exercise 22 What is the value of 2 < 1 < 3 
 const myAnswerForExercise22 = "true";
 
 // Congrats, you made it to the end!
