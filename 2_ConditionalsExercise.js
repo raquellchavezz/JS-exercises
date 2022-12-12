@@ -61,7 +61,7 @@ function exercise1(num1) {
   // ------------------------------------------
   // Write your code for exercise 1 below here:
   // ------------------------------------------
-if (num1 >10){ 
+if (num1 >10){ //if `num1` is greater than 10
   answer1= "The value of num1 is " + num1 +" and is greater than 10"; 
 }
   // ------------------------------------------
@@ -69,7 +69,8 @@ if (num1 >10){
   // ------------------------------------------
   return answer1;
 }
-console.log(exercise1(10)); 
+console.log(exercise1(10));  //checking output should be num1 is small 
+console.log(exercise1(20)); // checking, output should be The value of num1 is 20 and is greater than 10
 
 // EXERCISE 2.
 // Write an if/else conditional statement that if given a number will assign
@@ -79,32 +80,30 @@ console.log(exercise1(10));
 // and a value of "<num2 value> is odd" to `answer2`,
 // if `num2` is odd.
 // ie. if num2 has a value of 4 then the message should read:
-// "4e is even"
+// "4 is even"
 
-// function exercise2(num2) {
-//   let answer2;
-//   // --------------------------------------------
-//   // Write your code for the exercise below here:
-//   // --------------------------------------------
-//   if (typeof num2 === "undefined"){
-//     answer2= "error: please enter a value."
-//   }
-//   else if(num2 % 2 ==0){
-//       answer2 = num2 + " is even"; 
-// } else{
-//       answer2=num2 +" is odd";
-// }
+function exercise2(num2) {
+  let answer2;
+  // --------------------------------------------
+  // Write your code for the exercise below here:
+  // --------------------------------------------
+  if (typeof num2 === "undefined"){ // accounting for an undefined value, if nothing gets inputted should show an error
+    answer2= "error: please enter a value."
+  }
+  else if(num2 % 2 == 0){ // if the number is divisible by 2 (meaning a remainder of 0) then it would be even
+      answer2 = num2 + " is even"; 
+} else{ // otherwise it would be odd
+      answer2=num2 +" is odd";
+}
 
-//   // --------------------------------------------
-//   // And above here
-//   // --------------------------------------------
-//   return answer2;
-// }
-// console.log(exercise1(10)); 
-
-
-
-// CHECK THE UNDEFINED VALUES NOT WORKING ****
+  // --------------------------------------------
+  // And above here
+  // --------------------------------------------
+  return answer2;
+}
+console.log(exercise2(4)); // 4 is even
+console.log(exercise2(3));// 3 is odd
+console.log(exercise2()); // error
 
 
 // EXERCISE 3.
@@ -116,87 +115,101 @@ console.log(exercise1(10));
 // otherwise if the value is zero it should return
 // "<num3 value> is zero"
 
-// function exercise3(num3) {
-//   let answer3;
-//   // --------------------------------------------
-//   // Write your code for the exercise below here:
-//   // --------------------------------------------
-//   if (typeof varA === "undefined" || typeof varB === "undefined"){ 
-//     answer4 = "Error: Please enter a string or number."
-//     } else if (varA == varB){ 
-//         answer4 = "varA and varB are equal"; 
-//     }else{ 
-//         answer4 = "varA and varB differ"
-//       }
-//   // --------------------------------------------
-//   // And above here
-//   // --------------------------------------------
-//   return answer3;
-// }
+function exercise3(num3) {
+  let answer3;
+  // --------------------------------------------
+  // Write your code for the exercise below here:
+  // --------------------------------------------
+  if(num3 >0){ // if the number is bigger than 0
+    answer3= num3 +" is positive";
+  }else if (num3 <= -1){ // if the number is less than or = to -1 so -1 and below are negative numbers
+    answer3 = num3 + " is negative";
+  }else{ // if it is 0
+    answer3= num3 + " is zero"
+  }
+  // --------------------------------------------
+  // And above here
+  // --------------------------------------------
+  return answer3;
+}
+console.log(exercise3(10)); // 10 is positive
+console.log(exercise3(-2)); // -2 is negative
+console.log(exercise3(0)); // 0 is zero 
+console.log(exercise3(-1)); //-1 is negative
+console.log(exercise3(1)); // 1 is positive
+
+
+
+
 
 // EXERCISE 4.
 // Write an if/else statement such that if `varA` and `varB` are strings or
 // numbers and they have equal values, then change the value of answer4 to
 // "varA and varB are equal"
-// otherwise assign a value of "varA and varB differ"   **** five and 5?
+// otherwise assign a value of "varA and varB differ"  
 
-// function exercise4(varA, varB) {
-//   let answer4;
-//   // --------------------------------------------
-//   // Write your code for the exercise below here:
-//   // --------------------------------------------
+function exercise4(varA, varB) {
+  let answer4;
+  // --------------------------------------------
+  // Write your code for the exercise below here:
+  // --------------------------------------------
 
-//   if (typeof varA === "undefined"|| typeof varB === "undefined"){ 
-//   answer4 = "Error: Please enter a string or number."
-//   } else if (varA == varB){ 
-//       answer4 = "varA and varB are equal"; 
-//   }else{ 
-//       answer4 = "varA and varB differ"
-//     }
-//  // --------------------------------------------
-//   // And above here
-//   // --------------------------------------------
-//   return answer4;
-// }
-
-
-// - 
-
+  if (typeof varA === "undefined"|| typeof varB === "undefined"){ // accounting for undefined value
+  answer4 = "Error: Please enter a string or number."
+  } else if (varA == varB){ 
+      answer4 = "varA and varB are equal"; 
+  }else{ 
+      answer4 = "varA and varB differ"
+    }
+ // --------------------------------------------
+  // And above here
+  // --------------------------------------------
+  return answer4;
+}
+console.log(exercise4(1, 2)); //varA and varB differ
+console.log(exercise4(4, 2)); // varA and varB differ
+console.log(exercise4(1, 1)); // varA and varB are equal
+console.log(exercise4()); //Error: Please enter a string or number.
+console.log(exercise4("cat", "cat")); // varA and varB are equal
+console.log(exercise4("dog", "cat"));// varA and varB differ
+console.log(exercise4(NaN, true)); // varA and varB differ
+console.log(exercise4(NaN, NaN)); // varA and varB differ
 
 // EXERCISE 5.
 // In exercise 4, what are some of the unexpected cases where `varA` and `varB`
 // seemed like they are equal, but would not pass the tests? In your analysis
 // consider other data types beside strings and variables.
-
-
-
-// SKIPPED COME BACK 
-// - NaN not = NaN
+// An unexpected case I came by was that NaN values do not equal each other. So when we test NaN == NaN it is not true. I linked an article that explains why this is the case which 
+// helped me understand more.Alos, when comparing a string the data types are the same but the words themselves are not the same so these values differ.
 // https://medium.com/engineering-housing/nan-is-not-equal-to-nan-771321379694
-
-
-
-
 
 // EXERCISE 6.
 // Here, assign the value of true to answer6 if:
 // `varA` and `varB` are equal, but `varA` or `varB` does not equal `varC`
 // in the event this is not the case, change the value of answer6 to false
-// function exercise6(varA, varB, varC) {
-//   let answer6 = "unassigned";
-//   // --------------------------------------------
-//   // Write your code for the exercise below here:
-//   // --------------------------------------------
-//   if (varA == varB && varA != varC || varB != varC){ 
-//     answer6 = "true";
-//   }else{ 
-//     answer6 = "false"; 
-//   }
-//   // --------------------------------------------
-//   // And above here
-//   // --------------------------------------------
-//   return answer6;
-// }
+
+function exercise6(varA, varB, varC) {
+  let answer6 = "unassigned";
+  // --------------------------------------------
+  // Write your code for the exercise below here:
+  // --------------------------------------------
+  if (varA === varB && varA != varC && varB != varC){ //`varA` and `varB` are equal, but `varA` or `varB` does not equal `varC`
+    answer6 = true;
+  }else{ 
+    answer6 = false; 
+  }
+  // --------------------------------------------
+  // And above here
+  // --------------------------------------------
+  return answer6;
+}
+console.log(exercise6(1,1,1)); //false
+console.log(exercise6(1,1,8)); //true
+console.log(exercise6(1,"1",8)); //false
+console.log(exercise6(2,2,1));  //true
+
+
+
 
 // EXERCISE 7.
 // Use a switch conditional statement with case clauses such that if `num7` is
@@ -211,55 +224,64 @@ console.log(exercise1(10));
 // Othewise, assign answer7 a value of:
 // "Thanks for that!"
 
-// function exercise7(num7){
-//   let answer7;
+function exercise7(num7){
+  let answer7;
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-//   switch (num7){ 
-//     case 1: 
-//       answer7 = "You won!";
-//       break;
-//     case 7: 
-//       answer7 = "You are lucky!"; 
-//       break; 
-//     case 101: 
-//       answer7 = "Welcome to coding 101"; 
-//       break; 
-//     case 1000000: 
-//       answer7 = "You are one in a million";
-//       break; 
-//     default: 
-//     answer7 = "Thanks for that!";
+  switch (num7){ 
+    case 1: // in the case that the number is 1
+      answer7 = "You won!";
+      break;
+    case 7: // in the case that the number is 7...etc
+      answer7 = "You are lucky!"; 
+      break; 
+    case 101: 
+      answer7 = "Welcome to coding 101"; 
+      break; 
+    case 1000000: 
+      answer7 = "You are one in a million";
+      break; 
+    default: // default value
+    answer7 = "Thanks for that!";
 
-//   // --------------------------------------------
-//   // And above here
-//   // --------------------------------------------
-//   }
-//   return answer7; 
-
-// }
-
+  // --------------------------------------------
+  // And above here
+  // --------------------------------------------
+  }
+  return answer7; 
+}
+//test cases:
+console.log(exercise7(1)); 
+console.log(exercise7(7)); 
+console.log(exercise7(10)); 
+console.log(exercise7(101)); 
+console.log(exercise7(1000000)); 
+console.log(exercise7(20)); 
+ 
 // EXERCISE 8.
 // Using any conditional assign the value of true to answer8 if:
 // the values of amount1 and amount2 are between the values of
 // minimum and maximum
 // if not, assign a value of false to answer8
-// function exercise8(amount1, amount2, minimum, maximum) {
-//   let answer8;
-//   // --------------------------------------------
-//   // Write your code for the exercise below here:
-//   // --------------------------------------------
-//   if (amount1>= minimum && amount2 <= maximum ){ 
-//     answer8= "true"; 
-//   } else { 
-//     answer8= "false"; 
-//   }
-//   // --------------------------------------------
-//   // And above here
-//   // --------------------------------------------
-//   return answer8;
-// }
+function exercise8(amount1, amount2, minimum, maximum) {
+  let answer8;
+  // --------------------------------------------
+  // Write your code for the exercise below here:
+  // --------------------------------------------
+  if (amount1>= minimum && amount2 <= maximum ){ // we are including the min and max in the numbers that are valid which would then ouput true 
+    answer8= "true"; 
+  } else { 
+    answer8= "false"; 
+  }
+  // --------------------------------------------
+  // And above here
+  // --------------------------------------------
+  return answer8;
+}
+console.log(exercise8(10,20,1,50)); //true -->  nums 1 - 50 
+console.log(exercise8(100,1,1,100));//true--> nums 1 - 100 include the numbers 1 and 100
+console.log(exercise8(9,2,20,50)); //false --> nums 20 - 50 do not include 9 and 2 
 
 // EXERCISE 9.
 // In this exercise, if `item` is a number, follow the rules given in Exercise 7
@@ -268,33 +290,34 @@ console.log(exercise1(10));
 // "Please send a number, that was a <data type>."
 // for example, if item===true, the value should be:
 // "Please send a number, that was a boolean."
-// function exercise9(item) {
-//   let answer9;
-//   // --------------------------------------------
-//   // Write your code for the exercise below here:
-//   // --------------------------------------------
-//   if (isNaN(item)|| typeof item === "undefined"){ 
-//     answer9 =  "Please send a number, that was a " + typeof(item) + " datatype."
-//   } else if (item === 7 ){ 
-//     answer9 = "You are lucky"; 
-//   }else if (item === 101){ 
-//     answer9 = "Welcome to coding 101!";
-//   }else if (item ===  1000000){ 
-//     answer9 = "You are one in a million!"; 
-//   }else{
-//     answer9 = "Thanks for that"
-//   }
-//   // --------------------------------------------
-//   // And above here
-//   // --------------------------------------------
-//   return answer9;
-// }
-
-
-
-
-
-
+function exercise9(item) {
+  let answer9;
+  // --------------------------------------------
+  // Write your code for the exercise below here:
+  // --------------------------------------------
+  if (isNaN(item) || item === true || item === false){ 
+    answer9 =  "Please send a number, that was a " + typeof(item) + " datatype."
+  } else if (item === 7 ){ 
+    answer9 = "You are lucky"; 
+  }else if (item === 101){ 
+    answer9 = "Welcome to coding 101!";
+  }else if (item ===  1000000){ 
+    answer9 = "You are one in a million!"; 
+  }else{
+    answer9 = "Thanks for that"
+  }
+  // --------------------------------------------
+  // And above here
+  // --------------------------------------------
+  return answer9;
+}
+console.log(exercise9(7)); 
+console.log(exercise9(101)); 
+console.log(exercise9(1000000)); 
+console.log(exercise9(2)); 
+console.log(exercise9(true)); 
+console.log(exercise9("hello")); 
+console.log(exercise9());
 
 // EXERCISE 10.
 // This question is a modified version of a classic programming question
@@ -306,31 +329,33 @@ console.log(exercise1(10));
 // and if none of these conditions are satisfied, then assign the value of
 // `num10` to `answer10`
 
-// function exercise10(num10) {
-//   let answer10;
-//   // --------------------------------------------
-//   // Write your code for the exercise below here:
-//   // --------------------------------------------
-//   if (num10 % 15 === 0){ 
-//     answer10= "Fizz Buzz"; 
-//   }else if (num10 % 5 === 0){ 
-//     answer10 = "Buzz"; 
-//   }else if (num10 % 3 === 0){ 
-//     answer10 = "Fizz";
-//   }else{ 
-//     answer10 = num10
-//   }
-//   // --------------------------------------------
-//   // And above here
-//   // --------------------------------------------
-//   return answer10;
-// }
+function exercise10(num10) {
+  let answer10;
+  // --------------------------------------------
+  // Write your code for the exercise below here:
+  // --------------------------------------------
+  if (num10 % 15 === 0){ 
+    answer10= "Fizz Buzz"; 
+  }else if (num10 % 5 === 0){ 
+    answer10 = "Buzz"; 
+  }else if (num10 % 3 === 0){ 
+    answer10 = "Fizz";
+  }else{ 
+    answer10 = num10
+  }
+  // --------------------------------------------
+  // And above here
+  // --------------------------------------------
+  return answer10;
+}
+console.log(exercise10(30)); // Fizz Buzz
+console.log(exercise10(2)); // 2
+console.log(exercise10(25)); //Buzz
+console.log(exercise10(6)); //Fizz
+console.log(exercise10(100)); //Buzz
 
 // Congrats, you made it to the end! You rock!
 // Did you find this easy or hard? If you used references, which ones helped you?
 // Please answer in a comment below.
-//
-
+//I found this to be more challenging than the last exercise. Personally, functions are a bit harder for me so this took me more time but looking back on freecode camp with the 133 course helped as well as re-watching a few youtube videos 
 // Email your file to us or commit your file to GitHub and email us a link.
-
-// *** what if its divisible by 5 and 15 and what if % by all 3?

@@ -207,7 +207,7 @@ while (counterFour > - 100 ) { // while the number is greater than - 100 we will
 // (Hint - use an if statement in your loop)
 
 // let favInt = 99; 
-// undefined
+
 // for (let i = 0; i <101; i++ ){
 //     if (i == favInt){
 //          console.log(i + " my favorite number!");
@@ -218,6 +218,14 @@ while (counterFour > - 100 ) { // while the number is greater than - 100 we will
 // }
 
 
+var myInteger = 15; 
+for(let v = 0; v <=100; v++){ 
+  if (v == myInteger){ 
+    console.log(v + " my fav number!")
+  }else{ 
+    console.log(v + " not my fav number")
+  }
+}
 
 
 
