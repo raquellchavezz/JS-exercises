@@ -11,8 +11,9 @@
 
 // Exercise 1. Write a 'while' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
+
 // const myArray1= []; // start off w/ an empty array so we can add the numbers to it 
-// let i = 1 // starting at 1 because we want to include numbers between 1 and 5 inclusive
+// let i = 1; // starting at 1 because we want to include numbers between 1 and 5 inclusive
 // while(i<=5){  //while the number is less than or equal to 5 we will execute the code in the curly braces
 //   myArray1.push(i); // .push is adding i (the number at the iteration while the number <= 5) to the array
 //   i++; // adding one each time to the number when it goes thru loop until the number is = 5
@@ -40,8 +41,7 @@
 
 // Exercise 3. Write a 'for' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
-// const myArray3=[] //start w empty array
-
+// const myArray3=[]; //start w empty array
 // for (let i = 1; i <6; i++){ // start at 1, go through for loop until 1 <6, add 1 to i)
 //   myArray3.push(i); // add i (the number the iteration is on )to the array
 // }
@@ -76,7 +76,7 @@
 
 
 
-// // for loop answer:
+// for loop answer:
 // const myArray4 = []; // start w empty array so we can add numbes
 // for(let i = 10; i > 0; i--){ // start at number 10, go through for loop while the number is > 0 is true, then we will decrease the number by 1 each time going through loop until condition isn't satisfied
 //   myArray4.push(i); // adding the number to the array 
@@ -125,16 +125,16 @@
 
 
 
-// Exercise 6. Write a loop that prints numbers between 0 and 100, counting by tens.
+// Exercise 6. Write a loop that prints numbers between 0 and 100, counting by tens. 
 // I.e. it will print 10, then 20, then 30, etc.
 // Write this loop in all 3 ways -- as a 'while', 'do while', and 'for' loop.
 
 
 // while loop answer:
 // const myArr6 = [];
-// let i = 0; // start at 0 
+// let i = 0; // start at 0 we are including this number
 
-// while (i <= 100) { // while the number is less than or equal to 100
+// while (i <= 100) { // while the number is less than or equal to 100, 100 inclusive
 //   myArr6.push(i); // we will add the number to the array each time while the condition is true
 //   i+=10; // then add by 10 each time to count by tens 10+10 = 20, 20+10 = 30, etc
 // }
@@ -181,11 +181,11 @@ counterFour will always be less than 2.
 we can fix this by changing the sign :
 */
 
-let counterFour = 1; // starting at 1
-while (counterFour > - 100 ) { // while the number is greater than - 100 we will execute code below
-  console.log("HELP ME!"); // print this as long as the above is true 
-  counterFour--; // we will decrease by 1 each time 
-}
+// let counterFour = 1; // starting at 1
+// while (counterFour > - 100 ) { // while the number is greater than - 100 we will execute code below
+//   console.log("HELP ME!"); // print this as long as the above is true 
+//   counterFour--; // we will decrease by 1 each time 
+// }
 
 // 1, -1, -2, -3, -4...-99 --> prints 
 // negatives -99 > -100 
@@ -217,25 +217,16 @@ while (counterFour > - 100 ) { // while the number is greater than - 100 we will
   
 // }
 
-
-var myInteger = 15; 
-for(let v = 0; v <=100; v++){ 
-  if (v == myInteger){ 
-    console.log(v + " my fav number!")
-  }else{ 
-    console.log(v + " not my fav number")
-  }
-}
-
-
-
-
-
-
 // Exercise 10. In some of the exercises above, we had you write all 3 types of loops, for practice.
 // But in real life, how would you decide which type of loop to use? You might not have an
 // exact answer, but spend a few minutes thinking about the different types of loops and/or
 // doing some research and write down your thoughts in a comment below:
+
+// While I was researching different approaches for some of these questions when I got stuck, the most common loop I saw was a for loop.
+// With this, I think I would use a for loop to stay consistent with other programmers but also because I thnk the structure of a for loop 
+//is more clear as you have a initializer, condition, and increment or decrement. I also think a for loop allows you to be more aware of a potential infinite loop. Online, it said that for loops are typically 
+// used when you know how many times the loop should run. However if you want the loop to break based on a condition that is not the number of times it runs, we should use a while loop. Also, do while loops structure
+// is a bit confusing for me so I would avoid this and use a for loop instead. 
 
 
 
@@ -260,13 +251,13 @@ inside 1
 *********************************** 
 */
 
-// for (let outsideCounter = 0; outsideCounter <= 3; outsideCounter++) { // this means that we're starting outside counter at 0, going up to & including 3, then adding 1 each time the loop finishes
-//   console.log("counting down from", outsideCounter); // this should be paired with the iteration the loop is at up to and including 3 
-//   for (let insideCounter = outsideCounter;insideCounter>0; insideCounter--) { // 
-//     console.log("inside", insideCounter);
-//   }
-//   console.log("***********************************");
-// }
+for (let outsideCounter = 0; outsideCounter <= 3; outsideCounter++) { // this means that we're starting outside counter at 0, going up to & including 3, then adding 1 each time the loop finishes
+  console.log("counting down from", outsideCounter); // this should be paired with the iteration the loop is at up to and including 3 
+  for (let insideCounter = outsideCounter;insideCounter>0; insideCounter--) { // 
+    console.log("inside", insideCounter);
+  }
+  console.log("***********************************");
+}
 
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?
