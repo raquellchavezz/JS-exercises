@@ -24,11 +24,10 @@
 // Remember, this function should return the string -- not print it.
 // Then print your name in the console by passing getName() into the console.log() function.
 
-// function getName(string){ 
-//   return string;
+// function getName(){ 
+//   return "Raquel";
 // }
-// getName("Raquel");
-
+// console.log(getName());
 
 
 // Exercise 3. Call a function within a function -- Write a function called logGreeting2()
@@ -36,13 +35,10 @@
 // logGreeting2 should call myName() to get your name.
 // Then print your greeting to the console by calling logGreeting2().
 
-// function logGreeting2(myName){ 
-//   return "Hello! My name is " + myName(); 
-//   function myName(){ 
-//     return "Raquel"; 
-//   }
+// function logGreeting2(){ 
+//   return "Hello! My name is " +getName() + ".";
 // }
-// logGreeting2(myName);
+// console.log(logGreeting2());
 
 
 // Exercise 4. Write a function that takes 3 parameters that are all numbers.
@@ -54,9 +50,9 @@
 //   return sum;
 // }
 
-// console.log(sumNum(2,2,2));
-// console.log(sumNum(6,2,1));
-// console.log(sumNum(4,5,1)); 
+// console.log(sumNum(2,2,2));//6
+// console.log(sumNum(6,2,1));  //9
+// console.log(sumNum(4,5,1)); //10
 
 
 
@@ -72,7 +68,7 @@
 //notes: 
 // age <= 14 get a discount and age >= 65 get discount --> return true  
 // if age > 14 OR age < 65 = NOT discount --> return false
-// 
+
 // function discountCheck(age){ 
 //   if (age <=14 || age >= 65){ 
 //     return true;
@@ -81,10 +77,10 @@
 //   }
 //   } 
 
-//   console.log(discountCheck(18)); 
-//   console.log(discountCheck(10));  
-//   console.log(discountCheck(14));  
-//   console.log(discountCheck(65));
+//   console.log(discountCheck(18)); //false
+//   console.log(discountCheck(10));  //true
+//   console.log(discountCheck(14));  // true
+//   console.log(discountCheck(65)); //true
   
 
 
@@ -103,9 +99,7 @@
 //   }
 //   return repeatedString; //" hellohellohello"
 // }
-// myFunc("hello",3); 
-
-// ******* WHY IS THIS YELLOW
+// console.log(myFunc("hello",3)); 
 
 
 // Exercise 7. Read the following code (don't run it yet)
@@ -173,26 +167,23 @@ returns the value of x
 // Here's a string I made representing my grocery list.
 // Using split() and groceryList, make an array of my grocery list items
 // const groceryList = "eggs,carrots,orange juice";
-
-// console.log(groceryList.split());
+// console.log(groceryList.split(","));
 
 // Here's a string I made representing my morning schedule.
 // Using split() and mySchedule, make an array of the *first 2* things I do in the morning
 // There are multiple ways to do this, but try doing it using only the split() function.
 // const mySchedule = "wake up--->brush teeth--->eat breakfast--->go to work";
 // const splitHere = "--->"; 
-// mySchedule.split(splitHere,2); 
-// // but another way would be: 
+// console.log(mySchedule.split(splitHere,2)); 
+
+// but another way would be: 
 // const mySchedule = "wake up--->brush teeth--->eat breakfast--->go to work";
-// undefined
 // const myArray = mySchedule.split("--->", 2);
-
-
-
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?
 // Please answer in a comment below.
-//
+
+// I found this assignment to be easier than the others, I used FCC 113 as a review because I forgot some of the properties to use. 
 
 // Email your file to the course staff,
 // or commit your file to GitHub and email us a link.
