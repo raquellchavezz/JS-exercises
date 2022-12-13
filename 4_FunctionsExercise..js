@@ -13,10 +13,10 @@
 // Underneath the function, write the line of code that runs the function.
 
 
-// function logGreeting(){ 
-//   console.log("Hello!")
-// }
-// logGreeting(); 
+function logGreeting(){ 
+  console.log("Hello!")
+}
+logGreeting(); 
 
 
 
@@ -24,10 +24,10 @@
 // Remember, this function should return the string -- not print it.
 // Then print your name in the console by passing getName() into the console.log() function.
 
-// function getName(){ 
-//   return "Raquel";
-// }
-// console.log(getName());
+function getName(){ 
+  return "Raquel";
+}
+console.log(getName());
 
 
 // Exercise 3. Call a function within a function -- Write a function called logGreeting2()
@@ -35,24 +35,24 @@
 // logGreeting2 should call myName() to get your name.
 // Then print your greeting to the console by calling logGreeting2().
 
-// function logGreeting2(){ 
-//   return "Hello! My name is " +getName() + ".";
-// }
-// console.log(logGreeting2());
+function logGreeting2(){ 
+  return "Hello! My name is " +getName() + ".";
+}
+console.log(logGreeting2());
 
 
 // Exercise 4. Write a function that takes 3 parameters that are all numbers.
 // The function should return the sum of the 3 numbers.
 // Then write some function calls you would use to test your function.
 
-// function sumNum (num1, num2, num3){ 
-//   let sum = num1 + num2 + num3;
-//   return sum;
-// }
+function sumNum (num1, num2, num3){ 
+  let sum = num1 + num2 + num3;
+  return sum;
+}
 
-// console.log(sumNum(2,2,2));//6
-// console.log(sumNum(6,2,1));  //9
-// console.log(sumNum(4,5,1)); //10
+console.log(sumNum(2,2,2));//6
+console.log(sumNum(6,2,1));  //9
+console.log(sumNum(4,5,1)); //10
 
 
 
@@ -69,18 +69,18 @@
 // age <= 14 get a discount and age >= 65 get discount --> return true  
 // if age > 14 OR age < 65 = NOT discount --> return false
 
-// function discountCheck(age){ 
-//   if (age <=14 || age >= 65){ 
-//     return true;
-//   }else{
-//     return false;
-//   }
-//   } 
+function discountCheck(age){ 
+  if (age <=14 || age >= 65){ 
+    return true;
+  }else{
+    return false;
+  }
+  } 
 
-//   console.log(discountCheck(18)); //false
-//   console.log(discountCheck(10));  //true
-//   console.log(discountCheck(14));  // true
-//   console.log(discountCheck(65)); //true
+  console.log(discountCheck(18)); //false
+  console.log(discountCheck(10));  //true
+  console.log(discountCheck(14));  // true
+  console.log(discountCheck(65)); //true
   
 
 
@@ -91,25 +91,25 @@
 // The function should print the string the given number of times.
 // Then write some function calls you would use to test your function.
 
-// function myFunc(string, times) { // function takes in string and a number which will be repped by times
-//   var repeatedString = ""; // repeatedString will store the new string that will repeat x number of times 
-//   while (times > 0) { //while number of times is >0 we will execute code in {  }
-//     repeatedString += string; // same as repeatedString + string; 
-//     times--; // decrement times -1 
-//   }
-//   return repeatedString; //" hellohellohello"
-// }
-// console.log(myFunc("hello",3)); 
+function myFunc(string, times) { // function takes in string and a number which will be repped by times
+  var repeatedString = ""; // repeatedString will store the new string that will repeat x number of times 
+  while (times > 0) { //while number of times is >0 we will execute code in {  }
+    repeatedString += string; // same as repeatedString + string; 
+    times--; // decrement times -1 
+  }
+  return repeatedString; //" hellohellohello"
+}
+console.log(myFunc("hello",3)); 
 
 
 // Exercise 7. Read the following code (don't run it yet)
-// function mysteryFunction1(p1) {
-//   return p1 * 2;
-// }
-// const y = 4;
-// const z = mysteryFunction1(y);
-// console.log("The value of y is " + y);
-// console.log("The value of z is " + z);
+function mysteryFunction1(p1) {
+  return p1 * 2;
+}
+const y = 4;
+const z = mysteryFunction1(y);
+console.log("The value of y is " + y);
+console.log("The value of z is " + z);
 
 
 
@@ -132,14 +132,14 @@
 
 
 // Exercise 8. Read the following code (don't run it yet)
-// function mysteryFunction2(p1, p2) {
-//   const x = p1 - p2;
-//   return x;
-// }
-// const a = mysteryFunction2(10, 4);
-// const b = mysteryFunction2(a, 1);
-// console.log("The value of a is " + a);
-// console.log("The value of b is " + b);
+function mysteryFunction2(p1, p2) {
+  const x = p1 - p2;
+  return x;
+}
+const a = mysteryFunction2(10, 4);
+const b = mysteryFunction2(a, 1);
+console.log("The value of a is " + a);
+console.log("The value of b is " + b);
 
 // Without running the code, write down in a comment:
 // 1. What mysteryFunction2 does
@@ -166,15 +166,15 @@ returns the value of x
 
 // Here's a string I made representing my grocery list.
 // Using split() and groceryList, make an array of my grocery list items
-// const groceryList = "eggs,carrots,orange juice";
-// console.log(groceryList.split(","));
+const groceryList = "eggs,carrots,orange juice";
+console.log(groceryList.split(","));
 
 // Here's a string I made representing my morning schedule.
 // Using split() and mySchedule, make an array of the *first 2* things I do in the morning
 // There are multiple ways to do this, but try doing it using only the split() function.
-// const mySchedule = "wake up--->brush teeth--->eat breakfast--->go to work";
-// const splitHere = "--->"; 
-// console.log(mySchedule.split(splitHere,2)); 
+const mySchedule = "wake up--->brush teeth--->eat breakfast--->go to work";
+const splitHere = "--->"; 
+console.log(mySchedule.split(splitHere,2)); 
 
 // but another way would be: 
 // const mySchedule = "wake up--->brush teeth--->eat breakfast--->go to work";
