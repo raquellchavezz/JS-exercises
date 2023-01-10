@@ -7,13 +7,13 @@ let user = {};
 user.name = "John";
 console.log(user) // { name: 'John'}
 // Add the property surname with the value Smith.
-user.surname = "Smith"
+user.surname = "Smith";
 console.log(user) // { name: 'John', surname: 'Smith' }
 // Change the value of the name to Pete.
-user.name = "Pete"
+user.name = "Pete";
 console.log(user) // { name: 'Pete', surname: 'Smith' }
 // Remove the property name from the object.
-delete user.name 
+delete user.name; 
 console.log(user)// { surname: 'Smith' }
 
 // problem 2) Check for emptiness
@@ -26,7 +26,7 @@ function isEmpty(obj){
     for (let prop in obj){  
         return false; 
     }
-        return true
+        return true;
     }
 console.log(isEmpty(schedule)); // true, testing 
 // // console.log(( isEmpty(schedule))); // false, uncomment and run to test
@@ -80,12 +80,13 @@ let menu = {
     
     for(let key in obj){  
         if(typeof obj[key] === 'number'){ 
-        obj[key] *= 2
+        obj[key] *= 2;
         }
     }
     
   }
-  
+  multiplyNumeric(menu);
+  console.log(menu);
 
   // after the call
 //   menu = {
